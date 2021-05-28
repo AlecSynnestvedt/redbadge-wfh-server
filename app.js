@@ -24,7 +24,7 @@ try {
     dbConnection
         .authenticate()
         .then(async () => await dbConnection.sync(
-                // {force: true}
+                {force: true}
             )) 
         .then(() => {
             app.listen(process.env.PORT, () => {
